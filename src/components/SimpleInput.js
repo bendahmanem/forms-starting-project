@@ -1,7 +1,6 @@
-import { useRef, useState, useEffect } from 'react'
+import {  useState, useEffect } from 'react'
 
 const SimpleInput = (props) => {
-  const nameInputRef = useRef();
   const [nameState, setNameState] = useState('default')
   const [nameIsValid, setNameIsValid] = useState(false)
   const [nameIsTouched, setNameIsTouched] = useState(false)
@@ -56,7 +55,7 @@ const SimpleInput = (props) => {
         type='text' 
         id='name' />
 
-        {nameIsValid && (
+        {nameInputIsinvalid && (
           <p className='error-text'>Name cannot be empty</p>
         )}
 
